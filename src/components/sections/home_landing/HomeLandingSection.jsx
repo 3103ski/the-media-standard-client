@@ -6,7 +6,7 @@ import React from 'react';
 import { Container, Grid, Embed } from 'semantic-ui-react';
 
 // --> Project Imports
-// import { Button } from 'components';
+import { Overlay } from 'components';
 import { videoPlaceholder } from 'assets';
 import { checkSeshStorageAddIfNeeded } from 'util';
 import { fetchGeneralInfo } from 'groq';
@@ -48,7 +48,7 @@ export default function HomeLandingSection() {
 						</Grid.Row>
 					</Grid>
 				</Container>
-				<div className={Style.Overlay} />
+				<Overlay type='brand' />
 			</header>
 		);
 	};

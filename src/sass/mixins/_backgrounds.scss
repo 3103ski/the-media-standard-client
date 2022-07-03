@@ -1,3 +1,4 @@
+// SIZING
 @mixin center-cover-bg {
 	background-size: cover !important;
 	background-position: center !important;
@@ -13,7 +14,25 @@
 	background-position: top !important;
 }
 
-@mixin background-overlay-1 {
+// OVERLAYS
+@mixin background-overlay-brand {
 	background: linear-gradient(243.29deg, rgba(32, 177, 218, 0.15) 33.87%, rgba(237, 111, 170, 0.15) 57.04%),
 		linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+@mixin background-overlay-secondary {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #20b1da;
+	opacity: 0.5;
+}
+
+@mixin background-overlay-light {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+@mixin background-overlay-mid {
+	background-color: rgba(0, 0, 0, 0.45);
+}
+
+@mixin background-overlay-dark {
+	background-color: rgba(0, 0, 0, 0.8);
 }

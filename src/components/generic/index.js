@@ -12,3 +12,4 @@ export { Tabs } from './tabs/Tabs.jsx';
 export { default as TextWrapper } from './textWrapper/TextWrapper.jsx';
 export { default as Header } from './header/Header.jsx';
 export { default as Modal } from './modal/Modal.jsx';
+export { default as Overlay } from './overlay/Overlay.jsx';

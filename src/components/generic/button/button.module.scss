@@ -4,13 +4,13 @@
 	@include flex-center-center;
 	@include shadow-default;
 
-	padding: 17px 35px !important;
+	padding: 13px 35px !important;
 	font-size: 19px !important;
-	font-weight: 500 !important;
+	font-weight: 300 !important;
 	border-radius: map-get($borders, borders_small_radius) !important;
 	display: flex !important;
 	align-items: center !important;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	white-space: nowrap;
 	transition: 0.23s !important;
 	border: none;
@@ -136,9 +136,10 @@
 	// BUTTON TEXT COLOR
 	&[data-color='primary'],
 	&[data-color='primaryTransp'],
-	// &[data-color='secondary'],
+	&[data-color='secondary'],
 	&[data-color='secondaryTransp'] {
-		color: map-get($colors, color_themeBlack) !important;
+		color: white !important;
+		// color: map-get($colors, color_themeBlack) !important;
 	}
 
 	&[data-txt-color='light'] {

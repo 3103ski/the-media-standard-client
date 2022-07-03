@@ -1,0 +1,25 @@
+@import 'sass';
+
+.Overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	&[data-type='brand'] {
+		@include background-overlay-brand;
+	}
+	&[data-type='secondary'] {
+		@include background-overlay-secondary;
+	}
+	&[data-type='light'] {
+		@include background-overlay-light;
+	}
+	&[data-type='mid'] {
+		@include background-overlay-mid;
+	}
+	&[data-type='dark'] {
+		@include background-overlay-dark;
+	}
+}

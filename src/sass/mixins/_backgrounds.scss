@@ -1,0 +1,19 @@
+@mixin center-cover-bg {
+	background-size: cover !important;
+	background-position: center !important;
+}
+
+@mixin bottom-cover-bg {
+	background-size: cover !important;
+	background-position: bottom !important;
+}
+
+@mixin top-cover-bg {
+	background-size: cover !important;
+	background-position: top !important;
+}
+
+@mixin background-overlay-1 {
+	background: linear-gradient(243.29deg, rgba(32, 177, 218, 0.15) 33.87%, rgba(237, 111, 170, 0.15) 57.04%),
+		linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}

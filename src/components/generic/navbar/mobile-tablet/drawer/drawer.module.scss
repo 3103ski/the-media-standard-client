@@ -1,0 +1,44 @@
+@import 'sass';
+
+.DrawerWrapper {
+	@include remove-scrollbar;
+	@include flex-col-end;
+	position: relative;
+	z-index: 121;
+	height: 100vh;
+	width: 100vw;
+	background-color: map-get($colors, color_primary);
+	overflow-y: scroll;
+	padding-bottom: 70px;
+
+	.ButtonWrapper {
+		display: flex;
+		padding: 0 30px;
+		.EstBtn {
+			position: relative;
+			z-index: 0;
+		}
+	}
+}
+
+.Backdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100vw;
+	height: 100vh;
+
+	z-index: 10;
+	transition: 0.18s;
+
+	&[data-open='1'] {
+		display: flex;
+		opacity: 1;
+	}
+
+	&[data-open='0'] {
+		display: none;
+		opacity: 0;
+	}
+}

@@ -1,0 +1,33 @@
+$colors: (
+	// --> Theme
+	color_primary: #ed6faa,
+	color_primaryPale: #e889b5,
+	color_primaryTransp: #ed6faad0,
+	color_primaryDark: #e75096,
+	color_primaryAlt: #ca598e,
+	color_secondary: #20b1da,
+	color_secondaryPale: #62cae7,
+	color_secondaryTransp: #20b2dac7,
+	// --> Generics
+	color_red: #f63150cc,
+	color_redHover: #ee1414cc,
+	color_green: #4ebf62,
+	color_greenHover: #23b828,
+	color_ratingYellow: #ffc225,
+	// --> Shades
+	color_defaultBlack: #2d2d2d,
+	color_themeBlack: #363232,
+	color_themeWhite: #f9f9f9,
+	color_themeGrey: #a9a9a9,
+	// --> Brands
+	color_spotify: #1db954,
+	color_facebook: #3b5998,
+	color_google: #eaeaea,
+	color_yelp: #c41200d1
+);
+
+@each $colorName, $color in $colors {
+	:export {
+		#{$colorName}: #{map-get($colors, #{$colorName})};
+	}
+}

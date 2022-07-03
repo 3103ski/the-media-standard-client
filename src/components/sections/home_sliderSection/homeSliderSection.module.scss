@@ -6,16 +6,18 @@
 	height: 70vh;
 	min-height: 500px;
 	position: relative;
+
 	.Title {
 		@include flex-col-start;
 		@include banner-txt-default;
 		color: white;
 
 		span {
+			font-weight: 500;
+
 			&:first-of-type {
 				font-weight: 300;
 			}
-			font-weight: 500;
 
 			&:last-of-type {
 				font-weight: 800;

@@ -10,7 +10,7 @@ export const SURVEY = 'fa6-solid:list-check';
 
 // -->  Layout Icons
 export const BACK_ARROW = `akar-icons:arrow-left`;
-export const ARROW_RIGHT = `bi:arrow-right-circle-fill`;
+export const ARROW_RIGHT = `bi:arrow-right-square`;
 export const CARROT_DOWN = `ant-design:caret-down-outlined`;
 export const LEFT_DISC = `ant-design:left-circle-filled`;
 export const RIGHT_DISC = `ant-design:right-circle-filled`;

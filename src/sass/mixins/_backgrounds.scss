@@ -36,3 +36,7 @@
 @mixin background-overlay-dark {
 	background-color: rgba(0, 0, 0, 0.8);
 }
+
+@mixin background-overlay-lighten {
+	background-color: rgba(242, 242, 242, 0.1);
+}

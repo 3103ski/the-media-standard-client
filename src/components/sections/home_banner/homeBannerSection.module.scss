@@ -1,0 +1,28 @@
+@import 'sass';
+
+.Outer {
+	@include flex-center;
+	min-height: 500px;
+
+	position: relative;
+	background-color: #050505;
+
+	img {
+		width: 30%;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		transform: scaleX(-1);
+	}
+
+	.Content {
+		width: 80%;
+		position: relative;
+		z-index: 10;
+
+		h3 {
+			color: map-get($colors, color_secondary);
+			@include banner-txt-secondary;
+		}
+	}
+}

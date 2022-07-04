@@ -2,6 +2,27 @@
 
 .Wrapper {
 	@include top-cover-bg;
+	@include flex-center-center;
 	position: relative;
 	height: 75vh;
+	z-index: 10;
+
+	h1 {
+		@include banner-txt-default;
+		color: white;
+		font-weight: 300;
+		span {
+			font-weight: 600;
+			color: map-get($colors, color_primary);
+
+			&:first-of-type {
+				color: map-get($colors, color_secondary);
+				font-weight: 800;
+			}
+		}
+	}
+
+	button {
+		margin: 45px auto 0 auto !important;
+	}
 }

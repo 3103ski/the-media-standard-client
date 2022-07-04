@@ -29,9 +29,14 @@
 	&[data-type='lighten'] {
 		@include background-overlay-lighten;
 	}
+
+	&[data-pale='1'] {
+		opacity: 0.6;
+	}
 }
 
 .SiblingWrapper {
 	position: relative;
+	height: 100%;
 	z-index: 10;
 }

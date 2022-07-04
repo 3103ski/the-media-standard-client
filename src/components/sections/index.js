@@ -7,6 +7,8 @@ export { default as HomeBannerSection } from './home_banner/HomeBannerSection.js
 // About Page Sections
 export { default as AboutLandingSection } from './about_landing/AboutLandingSection.jsx';
 export { default as AboutBioSection } from './about_bioSection/AboutBioSection.jsx';
+export { default as AboutTeamSection } from './about_teamSection/AboutTeamSection.jsx';
 
 // Shared Sections
 export { default as SharedPartnersSection } from './shared_partners/SharedPartnersSection.jsx';
+export { default as SharedContactSection } from './shared_contactSection/SharedContactSection.jsx';

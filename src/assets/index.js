@@ -14,6 +14,7 @@ import aboutHeaderPlaceholder from './about_header-bg.jpg';
 // EXPORTS
 export * from './logos-partners';
 export * from './logos-tms';
+export * from './team-placeholders/';
 export {
 	aboutHeaderPlaceholder,
 	videoPlaceholder,

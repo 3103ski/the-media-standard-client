@@ -2,7 +2,7 @@
 import React from 'react';
 
 // --> Project Imports
-import { AboutLandingSection, AboutBioSection } from 'components';
+import { AboutLandingSection, AboutBioSection, AboutTeamSection, SharedContactSection } from 'components';
 
 // --> Component Imports
 import ViewWrapper from './ViewWrapper';
@@ -12,6 +12,8 @@ export default function AboutPage() {
 		<ViewWrapper>
 			<AboutLandingSection />
 			<AboutBioSection />
+			<AboutTeamSection />
+			<SharedContactSection />
 		</ViewWrapper>
 	);
 }

@@ -2,7 +2,13 @@
 import React from 'react';
 
 // --> Project Imports
-import { HomeLandingSection, HomeSliderSection, HomeMediaBioSection, HomeBannerSection } from 'components';
+import {
+	HomeLandingSection,
+	HomeSliderSection,
+	HomeMediaBioSection,
+	HomeBannerSection,
+	SharedPartnersSection,
+} from 'components';
 
 // --> Components Imports
 import ViewWrapper from './ViewWrapper';
@@ -14,6 +20,7 @@ export default function HomePage() {
 			<HomeSliderSection />
 			<HomeMediaBioSection />
 			<HomeBannerSection />
+			<SharedPartnersSection />
 		</ViewWrapper>
 	);
 }

@@ -27,3 +27,8 @@
 		@include background-overlay-lighten;
 	}
 }
+
+.SiblingWrapper {
+	position: relative;
+	z-index: 10;
+}

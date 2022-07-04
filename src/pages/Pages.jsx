@@ -6,9 +6,9 @@ import { Route, Routes, useLocation } from 'react-router';
 import { AnimatePresence } from 'framer-motion';
 
 // --> Project Imports
+import { HOME, ABOUT, PORTFOLIO, CONTACT } from 'routes';
+import { AboutPage, ContactPage, HomePage, PortfolioPage, ProjectTemplate } from './components';
 import { scrollToTopOf } from 'util';
-import { HOME } from 'routes';
-import { HomePage } from './components';
 
 export default function AnimatedRoutes() {
 	const location = useLocation();
@@ -18,6 +18,10 @@ export default function AnimatedRoutes() {
 		<AnimatePresence exitBeforeEnter onExitComplete={() => scrollToTopOf()}>
 			<Routes location={location} key={location.pathname}>
 				<Route exact path={HOME} element={<HomePage />} />
+				<Route exact path={ABOUT} element={<AboutPage />} />
+				<Route exact path={CONTACT} element={<ContactPage />} />
+				<Route exact path={PORTFOLIO} element={<PortfolioPage />} />
+				<Route exact path={`${PORTFOLIO}/:slug`} element={<ProjectTemplate />} />
 			</Routes>
 		</AnimatePresence>
 	);

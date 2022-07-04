@@ -8,14 +8,14 @@ import { Icon } from '@iconify/react';
 
 // --> Project Imports
 import { motion_variants_nav } from 'util';
-// import { Button } from 'components';
-import { HOME } from 'routes';
+import { Button } from 'components';
+import { HOME, ABOUT, PORTFOLIO } from 'routes';
 import { BACK_ARROW } from 'icons';
 
 // --> Component Imports
 // import NavBranding from './branding/Branding';
 // import DropMenu from './links/dropMenu/DropMenu';
-// import RootLink from './links/rootLink/RootLink';
+import RootLink from './links/rootLink/RootLink';
 import Style from './desktopNav.module.scss';
 
 export default function DesktopNav({ services }) {
@@ -66,7 +66,11 @@ export default function DesktopNav({ services }) {
 					</DropMenu>
 					<RootLink to={NEED_WEBSITE}>Need A Website?</RootLink> */}
 				</div>
-				<div className={Style.RightLinks}>{/* <RootLink to={HOME}>Resume</RootLink> */}</div>
+				<div className={Style.RightLinks}>
+					<RootLink to={ABOUT}>About Us</RootLink>
+					<RootLink to={PORTFOLIO}>Our Work</RootLink>
+					<Button thin>Let's Talk</Button>
+				</div>
 			</motion.nav>
 		</div>
 	);

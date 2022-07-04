@@ -20,6 +20,11 @@
 		linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
+@mixin background-overlay-brand-2 {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.26)),
+		linear-gradient(106.81deg, rgba(32, 177, 218, 0.35) 29.7%, rgba(237, 111, 170, 0.35) 77.58%);
+}
+
 @mixin background-overlay-secondary {
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #20b1da;
 	opacity: 0.5;

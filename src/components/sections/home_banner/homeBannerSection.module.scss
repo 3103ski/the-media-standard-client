@@ -29,6 +29,7 @@
 	.LogoPatch {
 		$logoSize: 200px;
 		position: absolute;
+		z-index: 10;
 		margin: 0 auto;
 		width: $logoSize;
 		transform: translateX(-50%);

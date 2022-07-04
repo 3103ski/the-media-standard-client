@@ -1,43 +1,49 @@
 @import 'sass';
 
 .Outer {
-	@include flex-center;
-	padding-bottom: 30px;
+	@include flex-col-center-center;
+	background-color: map-get($colors, color_defaultBlack);
+	padding-bottom: 10px;
+	position: relative;
+
+	p {
+		font-size: 11px;
+		letter-spacing: 1px;
+		font-weight: 300;
+		color: white;
+		margin: 0;
+	}
 
 	.Inner {
-		padding: 15px 30px;
+		@include flex-center-center;
 		z-index: 10;
+		padding: 25px 0 15px 0 !important;
+		position: relative;
 
-		border-radius: map-get($borders, borders_large_radius);
-		background-color: map-get($colors, color_defaultBlack);
-
-		h3,
-		p {
-			color: white;
-			margin: 0;
-		}
-
-		h3 {
-			@include p-default;
-		}
-
-		p {
-			@include p-small;
-			margin-bottom: 5px;
-		}
-
-		.Grid {
-			width: 100%;
-			.Links {
-				padding: 10px 0px;
+		.ImageCol {
+			@include flex-center-center;
+			img {
+				width: 80px;
 			}
+		}
 
-			.Right {
-				@include flex-col-center-center;
+		.LinkCol {
+			@include flex-center-center;
+			a {
+				@include p-small;
+				color: white;
+				padding: 10px 30px;
+				text-align: center;
+			}
+		}
 
-				.Logos {
-					@include flex-center-center;
-				}
+		.StartCol {
+			@include flex-center-center;
+
+			.GetStarted {
+				@include flex-center-center;
+				position: absolute;
+				right: 0;
 			}
 		}
 	}

@@ -11,6 +11,9 @@
 	&[data-type='brand'] {
 		@include background-overlay-brand;
 	}
+	&[data-type='brand-reverse'] {
+		@include background-overlay-brand-2;
+	}
 	&[data-type='secondary'] {
 		@include background-overlay-secondary;
 	}

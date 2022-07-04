@@ -1,0 +1,7 @@
+@import 'sass';
+
+.Wrapper {
+	@include top-cover-bg;
+	position: relative;
+	height: 75vh;
+}

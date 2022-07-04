@@ -1,0 +1,26 @@
+@import 'sass';
+
+.Outer {
+	position: relative;
+
+	.ImageHalf {
+		@include center-cover-bg;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 50%;
+	}
+
+	.Inner {
+		.Content {
+			@include flex-col-center;
+			min-height: 500px;
+			align-items: flex-start;
+
+			.Text {
+				padding-right: 80px;
+			}
+		}
+	}
+}

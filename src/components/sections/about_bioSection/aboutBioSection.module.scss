@@ -1,0 +1,12 @@
+@import 'sass';
+
+.Content {
+	padding: 40px 80px 40px 0px;
+	h1 {
+		@include banner-txt-secondary;
+	}
+
+	p {
+		@include p-default;
+	}
+}

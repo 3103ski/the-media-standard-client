@@ -3,10 +3,10 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 
 // --> Packages
-import { Container, Grid, Embed } from 'semantic-ui-react';
+import { Container, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
-import { Overlay } from 'components';
+import { Overlay, VimeoHeader } from 'components';
 import { videoPlaceholder } from 'assets';
 import { checkSeshStorageAddIfNeeded } from 'util';
 import { fetchGeneralInfo } from 'groq';
@@ -16,8 +16,6 @@ import Style from './homeLandingSection.module.scss';
 
 export default function HomeLandingSection() {
 	const [video, setVideo] = React.useState(null);
-
-	console.log(video);
 
 	React.useEffect(() => {
 		checkSeshStorageAddIfNeeded(
@@ -52,23 +50,12 @@ export default function HomeLandingSection() {
 			</header>
 		);
 	};
-
-	return video ? (
+	return !video ? (
 		<div className={Style.HeaderVideoContainer} id={'section-1'}>
 			<div className={Style.HeaderVideoOverlay}>
-				<Header vid={video} />
+				<Header vid={true} />
 			</div>
-			<Embed
-				autoplay={true}
-				id={video}
-				active
-				source='youtube'
-				iframe={{
-					allowFullScreen: true,
-					src: `https://www.youtube.com/embed/${video}?autoplay=1&;mute=1&;playlist=${video}&;loop=1&;controls=0&;rel=0`,
-					allow: 'autoplay',
-				}}
-			/>
+			<VimeoHeader />
 		</div>
 	) : (
 		<Header vid={video} />

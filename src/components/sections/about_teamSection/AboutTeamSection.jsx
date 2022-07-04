@@ -5,7 +5,7 @@ import React from 'react';
 // import { Grid } from 'semantic-ui-react';
 
 // --> Project Imports
-import { Card, Section } from 'components';
+import { TeamMemberCard, Section } from 'components';
 import { team1, team2, team3, team4 } from 'assets';
 
 // --> Component Import
@@ -44,11 +44,11 @@ export default function AboutTeamSection() {
 	];
 	return (
 		<Section fluid>
-			<Card.Wrapper>
+			<TeamMemberCard.Wrapper>
 				{team.map((t) => (
-					<Card item={t} />
+					<TeamMemberCard item={t} />
 				))}
-			</Card.Wrapper>
+			</TeamMemberCard.Wrapper>
 		</Section>
 	);
 }

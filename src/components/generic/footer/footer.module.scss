@@ -12,6 +12,10 @@
 		font-weight: 300;
 		color: white;
 		margin: 0;
+
+		a {
+			color: map-get($colors, color_secondary);
+		}
 	}
 
 	.Inner {

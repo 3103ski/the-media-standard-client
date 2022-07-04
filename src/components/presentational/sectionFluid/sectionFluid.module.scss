@@ -17,9 +17,14 @@
 			@include flex-col-center;
 			min-height: 500px;
 			align-items: flex-start;
+			padding-bottom: 40px;
+			padding-top: 30px;
+			margin-bottom: 80px !important;
 
-			.Text {
-				padding-right: 80px;
+			p,
+			h1,
+			h3 {
+				color: map-get($colors, color_themeBlack);
 			}
 		}
 	}

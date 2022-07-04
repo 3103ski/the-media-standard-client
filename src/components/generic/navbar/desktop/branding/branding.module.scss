@@ -3,9 +3,12 @@
 .NavBranding {
 	@include hover-cursor;
 	position: absolute;
-	left: 20px;
+	left: 40px;
+	margin-top: 4px;
+	width: 65px;
 
 	img {
+		width: 100%;
 		max-width: 270px !important;
 	}
 }

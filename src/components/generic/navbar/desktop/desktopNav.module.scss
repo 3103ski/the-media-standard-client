@@ -63,9 +63,14 @@
 		}
 
 		.CenterLinks,
+		.LeftLinks,
 		.RightLinks {
 			@include flex-center-center;
 			height: 100%;
+		}
+
+		.LeftLinks {
+			width: 100px;
 		}
 
 		.CenterLinks {

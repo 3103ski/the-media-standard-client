@@ -25,7 +25,7 @@ export default function HomeBannerSection() {
 				</div>
 			</Section>
 			<img className={Style.Picture} src={bannerBackground} alt='Banner Pic' />
-			<Overlay type='lighten' />
+			<Overlay type='light' />
 		</div>
 	);
 }

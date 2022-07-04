@@ -9,16 +9,16 @@ import aboutMainPlaceholder from './about_mainPlaceholder.jpg';
 import aboutHeaderPlaceholder from './about_header-bg.jpg';
 
 // Branding
-import logoPatch from './logo_patch.png';
+// import logoPatch from './logo_patch.png';
 
 // EXPORTS
-export * from './logos';
+export * from './logos-partners';
+export * from './logos-tms';
 export {
 	aboutHeaderPlaceholder,
 	videoPlaceholder,
 	sliderPlaceholder,
 	resMediaPlaceholder,
 	bannerBackground,
-	logoPatch,
 	aboutMainPlaceholder,
 };

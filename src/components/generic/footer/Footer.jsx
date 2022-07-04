@@ -7,7 +7,7 @@ import { Grid, Image } from 'semantic-ui-react';
 
 // --> Project Imports
 import { Section, Button } from 'components';
-import { PORTFOLIO, CONTACT, ABOUT } from 'routes';
+import { PORTFOLIO, CONTACT, ABOUT, HOME } from 'routes';
 import { logoPatch } from 'assets';
 
 // --> Component Imports
@@ -20,7 +20,9 @@ export function Footer() {
 				<Grid style={{ width: '100%' }}>
 					<Grid.Row>
 						<Grid.Column computer={4} className={Style.ImageCol}>
-							<Image src={logoPatch} />
+							<Link to={HOME}>
+								<Image src={logoPatch} />
+							</Link>
 						</Grid.Column>
 
 						<Grid.Column computer={3} className={Style.LinkCol}>

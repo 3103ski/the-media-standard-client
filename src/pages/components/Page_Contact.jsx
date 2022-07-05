@@ -1,10 +1,16 @@
 // --> React
 import React from 'react';
 
+// --> Project Imports
+import { SharedContactSection } from 'components';
+
+// --> Component Imports
+import ViewWrapper from './ViewWrapper';
+
 export default function ContactPage() {
 	return (
-		<div>
-			<h1>Contact Page</h1>
-		</div>
+		<ViewWrapper>
+			<SharedContactSection />
+		</ViewWrapper>
 	);
 }

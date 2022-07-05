@@ -10,17 +10,19 @@ import { Overlay, VimeoHeader } from 'components';
 import { videoPlaceholder } from 'assets';
 import { checkSeshStorageAddIfNeeded } from 'util';
 import { fetchGeneralInfo } from 'groq';
+import { useRatio } from 'hooks';
 
 // --> Component Imports
 import Style from './homeLandingSection.module.scss';
 
 export default function HomeLandingSection() {
 	const [video, setVideo] = React.useState(null);
+	const { height } = useRatio('16:9');
 
 	React.useEffect(() => {
 		checkSeshStorageAddIfNeeded(
 			`tms_landingvideo`,
-			(vid) => (vid ? setVideo(vid.split('=')[1]) : setVideo(null)),
+			(vid) => (vid ? setVideo(vid) : setVideo(null)),
 			fetchGeneralInfo,
 			null,
 			'landingVideo'
@@ -50,12 +52,12 @@ export default function HomeLandingSection() {
 			</header>
 		);
 	};
-	return !video ? (
-		<div className={Style.HeaderVideoContainer} id={'section-1'}>
-			<div className={Style.HeaderVideoOverlay}>
-				<Header vid={true} />
+	return video ? (
+		<div className={Style.HeaderVideoContainer} style={{ height }} id={'section-1'}>
+			<div className={Style.HeaderVideoOverlay} style={{ height }}>
+				<Header vid={video} />
 			</div>
-			<VimeoHeader />
+			<VimeoHeader video={video} />
 		</div>
 	) : (
 		<Header vid={video} />

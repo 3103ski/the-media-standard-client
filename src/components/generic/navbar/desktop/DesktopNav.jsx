@@ -1,5 +1,6 @@
 // --> React
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
 // --> Packages
@@ -9,7 +10,7 @@ import { motion } from 'framer-motion';
 // --> Project Imports
 import { motion_variants_nav } from 'util';
 import { Button } from 'components';
-import { HOME, ABOUT, PORTFOLIO } from 'routes';
+import { HOME, ABOUT, PORTFOLIO, CONTACT } from 'routes';
 // import { BACK_ARROW } from 'icons';
 
 // --> Component Imports
@@ -72,7 +73,9 @@ export default function DesktopNav({ services }) {
 				<div className={Style.RightLinks}>
 					<RootLink to={ABOUT}>About Us</RootLink>
 					<RootLink to={PORTFOLIO}>Our Work</RootLink>
-					<Button thin>Let's Talk</Button>
+					<Link to={CONTACT}>
+						<Button thin>Let's Talk</Button>
+					</Link>
 				</div>
 			</motion.nav>
 		</div>

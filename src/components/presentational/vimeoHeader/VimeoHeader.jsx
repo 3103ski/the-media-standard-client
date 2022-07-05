@@ -1,36 +1,22 @@
 // --> React
 import React from 'react';
 
-export default function VimeoHeader() {
-	const [width, setWidth] = React.useState(0);
-	const [height, setHeight] = React.useState(0);
+// --> Project Imports
+import { useRatio } from 'hooks';
 
-	const calculateHeight = () => {
-		let width = window.innerWidth;
-		let height = width * 0.5625;
-		setWidth(width);
-		setHeight(height);
-	};
-
-	React.useEffect(() => {
-		calculateHeight();
-	}, []);
-
-	React.useEffect(() => {
-		window.addEventListener('resize', calculateHeight);
-		return () => window.removeEventListener('resize', calculateHeight);
-	});
+export default function VimeoHeader({ video }) {
+	const { height, width } = useRatio('16:9');
 
 	return (
 		<div style={{ marginBottom: '-10px' }}>
 			<iframe
-				src='https://player.vimeo.com/video/393510658?h=215419beb5?autoplay=1&loop=1&autopause=0&background=1&color=ffffff&controls=2&portrait=0'
+				src={`${video}?autoplay=1&loop=1&autopause=0&background=1&color=ffffff&controls=2&portrait=0`}
 				width={width}
 				height={height}
 				title='landing video'
-				frameborder='0'
+				frameBorder='0'
 				allow='autoplay; fullscreen; picture-in-picture'
-				allowfullscreen></iframe>
+				allowFullScreen></iframe>
 		</div>
 	);
 }

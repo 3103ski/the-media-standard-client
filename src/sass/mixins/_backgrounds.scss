@@ -31,15 +31,15 @@
 }
 
 @mixin background-overlay-light {
-	background-color: rgba(0, 0, 0, 0.15);
+	background-color: rgba(0, 0, 0, 0.25);
 }
 
 @mixin background-overlay-mid {
-	background-color: rgba(0, 0, 0, 0.45);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 @mixin background-overlay-dark {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 @mixin background-overlay-lighten {

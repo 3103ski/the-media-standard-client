@@ -1,5 +1,6 @@
 // --> React
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // --> Packages
 import { Grid } from 'semantic-ui-react';
@@ -7,6 +8,7 @@ import { Grid } from 'semantic-ui-react';
 // --> Project Imports
 import { Button, Section, Overlay } from 'components';
 import { sliderPlaceholder } from 'assets';
+import { PORTFOLIO } from 'routes';
 
 // --> Component Imports
 import Style from './homeSliderSection.module.scss';
@@ -25,7 +27,9 @@ export default function HomeSliderSection() {
 									<span>OTHER</span>
 									<span>LEVEL</span>
 								</h1>
-								<Button color='primaryTransp'>SEE WORK</Button>
+								<Link as={Link} to={PORTFOLIO}>
+									<Button color='primaryTransp'>SEE WORK</Button>
+								</Link>
 							</Grid.Column>
 						</Grid.Row>
 					</Overlay.Sibling>

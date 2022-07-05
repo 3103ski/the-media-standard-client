@@ -1,0 +1,39 @@
+@import 'sass';
+
+.Wrapper {
+	@include flex-center;
+	@include center-cover-bg;
+	padding: 200px 0 100px 0;
+	position: relative;
+	min-height: 500px;
+	height: 50vh;
+
+	.Inner {
+		margin-right: auto;
+		h1,
+		p {
+			width: 60%;
+		}
+		h1 {
+			@include banner-txt-default;
+			color: white;
+			font-weight: 600;
+			padding: 0 !important;
+			margin-bottom: -24px;
+
+			span {
+				color: map-get($colors, color_secondary);
+			}
+
+			&:last-of-type {
+				color: map-get($colors, color_primary);
+				margin-bottom: 20px;
+			}
+		}
+
+		p {
+			@include p-default;
+			color: white;
+		}
+	}
+}

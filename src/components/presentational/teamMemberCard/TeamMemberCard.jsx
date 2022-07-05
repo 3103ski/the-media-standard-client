@@ -11,15 +11,6 @@ import { Overlay } from 'components';
 import Style from './card.module.scss';
 
 export default function Card({ item = { img: ' ', title: '', subtitle: '', content: '' } }) {
-	const ref = React.createRef();
-
-	const calcHeight = React.useCallback(() => {
-		if (ref.current) {
-			let el = ref.current.getBoundingClientRect();
-			ref.current.style.height = `${el.width}px`;
-		}
-	}, [ref]);
-
 	const Title = () => {
 		let rest = item.title.split(' ').splice(1).join(' ');
 		let first = item.title.split(' ')[0];
@@ -31,6 +22,15 @@ export default function Card({ item = { img: ' ', title: '', subtitle: '', conte
 			</div>
 		);
 	};
+
+	const ref = React.createRef();
+
+	const calcHeight = React.useCallback(() => {
+		if (ref.current) {
+			let el = ref.current.getBoundingClientRect();
+			ref.current.style.height = `${el.width}px`;
+		}
+	}, [ref]);
 
 	React.useEffect(() => {
 		if (ref.current) {

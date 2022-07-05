@@ -8,14 +8,10 @@ export default {
 			title: 'General Information',
 			type: 'string',
 		},
-		{
-			name: 'landingSlogan',
-			title: 'Landing Section Slogan',
-			type: 'string',
-		},
+
 		{
 			name: 'landingVideo',
-			title: 'Home Landing Video (Youtube URL)',
+			title: 'Home Landing Video (Vimeo URL)',
 			type: 'url',
 		},
 		{
@@ -31,11 +27,6 @@ export default {
 		{
 			name: 'yelp',
 			title: 'Yelp URL',
-			type: 'url',
-		},
-		{
-			name: 'youtube',
-			title: 'YouTube URL',
 			type: 'url',
 		},
 	],

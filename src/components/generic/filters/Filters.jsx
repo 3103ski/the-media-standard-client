@@ -30,10 +30,16 @@ export function Filters({
 		<>
 			<div className={Style.FilterSection} id='filterContainer'>
 				<Section>
-					<div className={`${Style.Top}`}>
+					{/* <div className={`${Style.Top}`}>
 						<p className={`${Style.Label} `}>{title}</p>
-					</div>
+					</div> */}
 					<div className={Style.FilterWrapper}>
+						<Filter
+							key={`${Math.random()}__`}
+							activeFilters={activeFilters}
+							label={'ALL'}
+							onClick={clearFilters}
+						/>
 						{filterOptions.map((filter, i) => (
 							<Filter
 								key={`${filter}__${i}`}
@@ -155,7 +161,7 @@ function Filter({ label = 'Add Label', onClick, callback, activeFilters = [] }) 
 	return (
 		<div
 			className={Style.Filter}
-			data-active={activeFilters.includes(label) ? 1 : 0}
+			data-active={activeFilters.includes(label) || (label === 'ALL' && activeFilters.length === 0) ? 1 : 0}
 			onClick={handlehandleFilterClick}>
 			<p>{label}</p>
 		</div>
@@ -167,7 +173,7 @@ Filters.Results = ({ renderItems, mapFunc, isCol = null }) => {
 
 	return (
 		<div id='result_wrapper'>
-			<Section id='result_items'>
+			<Section id='result_items' style={{ minHeight: '600px' }}>
 				{isCol ? (
 					<Grid centered>
 						<Grid.Row>{items}</Grid.Row>

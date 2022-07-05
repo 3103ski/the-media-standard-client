@@ -1,10 +1,12 @@
 // --> React
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // --> Project imports
 import { Section, Overlay, Button } from 'components';
 import { bannerBackground, logoPatch } from 'assets';
 import { ARROW_RIGHT } from 'icons';
+import { ABOUT } from 'routes';
 
 // --> Component Imports
 import Style from './homeBannerSection.module.scss';
@@ -16,12 +18,14 @@ export default function HomeBannerSection() {
 			<Section>
 				<div className={Style.Content}>
 					<h3>ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqu</h3>
-					<Button icon={ARROW_RIGHT} iconLeft={false} txtcolor='light' color='none'>
-						Meet Our Team
-					</Button>
-					<Button icon={ARROW_RIGHT} iconLeft={false} txtcolor='light' color='none'>
+					<Link to={ABOUT}>
+						<Button icon={ARROW_RIGHT} iconLeft={false} txtcolor='light' color='none'>
+							Meet Our Team
+						</Button>
+					</Link>
+					{/* <Button icon={ARROW_RIGHT} iconLeft={false} txtcolor='light' color='none'>
 						Learn how we work
-					</Button>
+					</Button> */}
 				</div>
 			</Section>
 			<img className={Style.Picture} src={bannerBackground} alt='Banner Pic' />

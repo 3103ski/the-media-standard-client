@@ -1,0 +1,40 @@
+@import 'sass';
+
+.Wrapper {
+	@include center-cover-bg;
+	@include hover-cursor;
+	transition: 0.2s;
+	padding: 10px;
+	position: relative;
+
+	h3,
+	p {
+		color: white;
+	}
+
+	h3 {
+		@include sub-default;
+		font-weight: 500 !important;
+	}
+
+	.Bottom {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+
+		h3 {
+			color: map-get($colors, color_primary);
+			font-weight: 500 !important;
+			margin: 0 !important;
+		}
+
+		p {
+			@include p-small;
+		}
+	}
+
+	&:hover {
+		opacity: 0.9;
+	}
+}

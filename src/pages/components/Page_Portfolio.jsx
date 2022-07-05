@@ -1,10 +1,17 @@
 // --> React
 import React from 'react';
 
+// --> Project Imports
+import { WorkHeaderSection, BrowseWorkSection } from 'components';
+
+// --> Component Imports
+import ViewWrapper from './ViewWrapper';
+
 export default function PortfolioPage() {
 	return (
-		<div>
-			<h1>Portfolio Page</h1>
-		</div>
+		<ViewWrapper>
+			<WorkHeaderSection />
+			<BrowseWorkSection />
+		</ViewWrapper>
 	);
 }

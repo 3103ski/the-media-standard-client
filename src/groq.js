@@ -42,22 +42,29 @@ export function fetchProjects() {
             projects[]->{
                 title,
                 slug,
-                projectLink,
-                projectType,
+                client->{
+                    company,
+                    description,
+                    logo{
+                        asset-> {
+                            url, 
+                            _id
+                        }
+                    }
+                },
+                tags[]->{
+                    title
+                },
                 year,
                 summary,
+                projectLink,
                 category,
-                status,
                 mainImage{
                     asset-> {
                         url,
                         _id
                     }
                 },
-                tech[]-> {
-                    icon,
-                    title
-                }
             }
         }`
 	);
@@ -125,12 +132,10 @@ export function fetchProject(slug) {
 export function fetchGeneralInfo() {
 	return sanityClient.fetch(
 		`*[_type == 'general'][0]{
-            landingSlogan,
             landingVideo,
             facebook,
             instagram,
             yelp,
-            youtube
         }`
 	);
 }

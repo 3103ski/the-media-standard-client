@@ -10,7 +10,8 @@
 }
 
 .FilterSection {
-	background-color: map-get($colors, color_themeWhite);
+	// background-color: map-get($colors, color_themeWhite);
+	background-color: rgba(255, 255, 255, 0.541);
 	z-index: 100;
 	transition: 0.3s;
 	position: relative;
@@ -29,7 +30,7 @@
 	}
 
 	.FilterWrapper {
-		@include flex-start;
+		@include flex-center-center;
 		flex-wrap: wrap;
 		align-items: center;
 		width: 100%;
@@ -74,6 +75,9 @@
 	&[data-active='1'] {
 		background-color: map-get($colors, color_primary);
 		border-color: map-get($colors, color_primary);
+		p {
+			color: white;
+		}
 	}
 
 	&:hover {

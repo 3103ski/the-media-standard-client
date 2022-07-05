@@ -1,12 +1,11 @@
 // --> React
 import React from 'react';
-
-// --> Packages
-import { Grid } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 // --> Project Imports
 import { resMediaPlaceholder } from 'assets';
 import { Button, TextWrapper, SectionFluid } from 'components';
+import { CONTACT } from 'routes';
 
 // --> Component Imports
 import Style from './homeMediaBioSection.module.scss';
@@ -22,7 +21,9 @@ export default function HomeMediaBioSection() {
 					consequuntur magni
 				</p>
 			</TextWrapper>
-			<Button color='secondary'>Get Started</Button>
+			<Link to={CONTACT}>
+				<Button color='secondary'>Get Started</Button>
+			</Link>
 		</SectionFluid>
 	);
 }

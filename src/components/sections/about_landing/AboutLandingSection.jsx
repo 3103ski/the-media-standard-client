@@ -1,5 +1,6 @@
 // --> React
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // --> Packages
 import { Grid, Image } from 'semantic-ui-react';
@@ -7,6 +8,7 @@ import { Grid, Image } from 'semantic-ui-react';
 // --> Project Imports
 import { Overlay, Section, Button } from 'components';
 import { aboutHeaderPlaceholder, logoPatch } from 'assets';
+import { CONTACT } from 'routes';
 
 // --> Component Imports
 import Style from './aboutLandingSection.module.scss';
@@ -26,7 +28,9 @@ export default function AboutLandingSection() {
 									WE'VE SHOT <span>THOUSANDS</span> OF <span>VIDEOS</span> AND <span>PHOTOS</span>
 								</h1>
 
-								<Button>Get Started</Button>
+								<Link to={CONTACT}>
+									<Button>Get Started</Button>
+								</Link>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>

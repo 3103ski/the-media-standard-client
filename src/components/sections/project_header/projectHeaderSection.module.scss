@@ -27,4 +27,16 @@
 			color: map-get($colors, color_primary);
 		}
 	}
+
+	@media #{map-get($media, mobile)} {
+		margin-top: 0 !important;
+
+		.Center {
+			margin: 20px 0 30px 0 !important;
+		}
+
+		.Right {
+			margin-top: 10px !important;
+		}
+	}
 }

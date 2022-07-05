@@ -24,7 +24,10 @@
 .Link,
 .SectionLabel {
 	// color: white;
-	color: map-get($colors, color_themeBlack);
+	// color: map-get($colors, color_themeBlack);
+	color: white;
+	font-weight: 500 !important;
+	// letter-spacing: 2px !important;
 
 	&:hover {
 		color: map-get($colors, color_secondary);

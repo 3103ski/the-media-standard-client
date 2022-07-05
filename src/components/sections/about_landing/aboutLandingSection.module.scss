@@ -25,4 +25,16 @@
 	button {
 		margin: 45px auto 0 auto !important;
 	}
+
+	@media #{map-get($media, mobile_sm)} {
+		height: unset;
+		padding: 50px 0;
+		.LogoWrapper {
+			@include flex-center-center;
+
+			.Logo {
+				width: 35% !important;
+			}
+		}
+	}
 }

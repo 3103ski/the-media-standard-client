@@ -28,4 +28,11 @@
 			}
 		}
 	}
+
+	@media #{map-get($media, mobile)} {
+		.ImageHalf {
+			filter: opacity(0.5);
+			width: 25%;
+		}
+	}
 }

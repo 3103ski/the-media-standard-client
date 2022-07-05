@@ -5,11 +5,12 @@
 	@include hover-cursor;
 
 	position: fixed;
-	bottom: 0;
+	top: 10px;
+	left: 10px;
 	z-index: 803;
-	padding: 24px 22px 15px 16px !important;
+	padding: 24px !important;
 	border: none;
-	border-top-right-radius: 40px;
+	border-radius: map-get($borders, borders_small_radius);
 	background-color: map-get($colors, color_primary) !important;
 
 	height: map-get($sizes, sizes_nav_m_toggle);
@@ -18,7 +19,7 @@
 	svg {
 		margin-top: 4px;
 		position: absolute;
-		color: map-get($colors, color_themeBlack);
+		color: map-get($colors, color_secondary);
 	}
 
 	@media #{map-get($media, cpu_min)} {

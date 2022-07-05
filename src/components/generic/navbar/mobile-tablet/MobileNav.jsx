@@ -5,7 +5,7 @@ import React from 'react';
 // import { Icon } from '@iconify/react';
 
 // --> Project Imports
-import { HOME, CONTACT, PORTFOLIO, ABOUT } from 'routes';
+import { HOME, PORTFOLIO, ABOUT } from 'routes';
 // import { Button, Modal } from 'components';
 // import { EMAIL } from 'icons';
 

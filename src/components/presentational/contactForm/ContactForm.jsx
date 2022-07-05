@@ -11,8 +11,10 @@ import { contactFormData } from './contactFormData';
 import Style from './contactForm.module.scss';
 
 export default function ContactForm() {
-	const [isLoading, toggleIsLoading] = React.useState(false);
-	const [status, setStatus] = React.useState(null);
+	// const [isLoading, toggleIsLoading] = React.useState(false);
+	let isLoading = false;
+	let status = null;
+	// const [status, setStatus] = React.useState(null);
 
 	function onSubmitContact(data) {
 		// toggleIsLoading(true);

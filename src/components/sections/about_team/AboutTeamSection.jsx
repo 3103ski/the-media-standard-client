@@ -10,10 +10,10 @@ import { TeamMemberCard, Section } from 'components';
 import { team1, team2, team3, team4 } from 'assets';
 
 // --> Component Import
-import Style from './aboutTeamSection.module.scss';
+// import Style from './aboutTeamSection.module.scss';
 
 export default function AboutTeamSection() {
-	const [isMobile, setIsMobile] = React.useState(false);
+	// const [isMobile, setIsMobile] = React.useState(false);
 	const team = [
 		{
 			title: 'Josh Smithers',
@@ -45,16 +45,16 @@ export default function AboutTeamSection() {
 		},
 	];
 
-	const mobileCheck = () => {
-		const width = window.innerWidth;
-		// const mBreakpoint =
-	};
+	// const mobileCheck = () => {
+	// 	const width = window.innerWidth;
+	// 	// const mBreakpoint =
+	// };
 	console.log(intFromPx);
 
 	React.useEffect(() => {}, []);
 
 	return (
-		<Section fluid={isMobile ? false : true}>
+		<Section>
 			<TeamMemberCard.Wrapper>
 				{team.map((t) => (
 					<TeamMemberCard key={`${t.title}_${Math.random()}`} item={t} />

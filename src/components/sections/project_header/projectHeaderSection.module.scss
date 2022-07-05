@@ -1,0 +1,30 @@
+@import 'sass';
+
+.Container {
+	margin-top: map-get($sizes, sizes_nav_height);
+	border-bottom: 3px solid map-get($colors, color_secondary);
+
+	h1 {
+		@include title-bold;
+		margin: 0 !important;
+	}
+
+	.Center {
+		@include flex-col-center;
+
+		h3 {
+			margin: 0 !important;
+			@include p-default;
+		}
+	}
+
+	.Right {
+		@include flex-col-center-center;
+
+		a {
+			@include p-small;
+			margin-top: 5px;
+			color: map-get($colors, color_primary);
+		}
+	}
+}

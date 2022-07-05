@@ -46,7 +46,7 @@ export default function AboutTeamSection() {
 		<Section fluid>
 			<TeamMemberCard.Wrapper>
 				{team.map((t) => (
-					<TeamMemberCard item={t} />
+					<TeamMemberCard key={`${t.title}_${Math.random()}`} item={t} />
 				))}
 			</TeamMemberCard.Wrapper>
 		</Section>

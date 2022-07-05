@@ -10,7 +10,7 @@ import { Overlay } from 'components';
 // --> Component Imports
 import Style from './card.module.scss';
 
-export default function Card({ item = { img: ' ', title: '', subtitle: '', content: '' } }) {
+export default function TeamMemberCard({ item = { img: ' ', title: '', subtitle: '', content: '' } }) {
 	const Title = () => {
 		let rest = item.title.split(' ').splice(1).join(' ');
 		let first = item.title.split(' ')[0];
@@ -44,7 +44,7 @@ export default function Card({ item = { img: ' ', title: '', subtitle: '', conte
 	}, [calcHeight]);
 
 	return (
-		<Grid.Column mobile={16} tablet={8} computer={4} className={Style.Container} ref={ref}>
+		<Grid.Column mobile={16} tablet={8} computer={4} className={Style.Container}>
 			<div className={Style.Inner} ref={ref}>
 				<div className={Style.BackgroundWrapper}>
 					<img className={Style.BackgroundImage} src={item.img} alt='team member' />
@@ -68,7 +68,7 @@ export default function Card({ item = { img: ' ', title: '', subtitle: '', conte
 	);
 }
 
-Card.Wrapper = ({ children }) => (
+TeamMemberCard.Wrapper = ({ children }) => (
 	<Grid>
 		<Grid.Row>{children}</Grid.Row>
 	</Grid>

@@ -1,0 +1,53 @@
+@import 'sass';
+
+.SliderWrapper {
+	padding: 20px 0;
+	position: relative;
+
+	.ActiveImage {
+		position: relative;
+		width: 100%;
+		padding-bottom: calc((100% * 0.5625));
+
+		.ActiveWrapper {
+			background-color: map-get($colors, color_primary);
+			position: absolute;
+			width: 100%;
+			transition: 0.4s;
+
+			&[data-is-active='1'] {
+				opacity: 1;
+				transition: 0s !important;
+			}
+
+			&[data-is-active='0'] {
+				opacity: 0;
+			}
+		}
+	}
+
+	.Thumbnails {
+		@include flex-center;
+		@include remove-scrollbar;
+		position: relative;
+		width: 100%;
+		margin-top: calc((100% * 0.1));
+		padding: 10px 0;
+		overflow-y: scroll;
+
+		.Inner {
+			@include flex-center;
+		}
+
+		.Thumbnail {
+			@include center-cover-bg;
+			@include hover-cursor;
+
+			transition: 0.18s;
+
+			&:last-of-type {
+				margin-right: 0 !important;
+			}
+		}
+	}
+}

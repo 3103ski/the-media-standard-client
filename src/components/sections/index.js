@@ -13,6 +13,11 @@ export { default as AboutTeamSection } from './about_team/AboutTeamSection.jsx';
 export { default as WorkHeaderSection } from './work_header/WorkHeaderSection.jsx';
 export { default as BrowseWorkSection } from './browse_projects/BrowseProjectsSection.jsx';
 
+// Project Template Page Sections
+export { default as ProjectHeaderSection } from './project_header/ProjectHeaderSection.jsx';
+export { default as ProjectSliderSection } from './project_slider/ProjectSliderSection.jsx';
+export { default as ProjectContentSection } from './project_content/ProjectContent.jsx';
+
 // Shared Sections
 export { default as SharedPartnersSection } from './shared_partners/SharedPartnersSection.jsx';
 export { default as SharedContactSection } from './shared_contact/SharedContactSection.jsx';

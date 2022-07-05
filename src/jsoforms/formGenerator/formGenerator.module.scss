@@ -5,11 +5,11 @@
 	width: 100%;
 	min-width: 330px;
 	padding: 20px;
-	height: calc(100vh - #{map-get($sizes, sizes_nav_height)});
+	// height: calc(100vh - #{map-get($sizes, sizes_nav_height)});
 	overflow-y: scroll;
 
 	.FormOuter {
-		padding-top: calc(map-get($sizes, sizes_nav_height) + 80px);
+		// padding-top: calc(map-get($sizes, sizes_nav_height));
 
 		height: 100%;
 		width: 100%;
@@ -29,12 +29,14 @@
 	.ButtonWrapper {
 		width: 100%;
 		padding: 20px 0;
-		display: flex;
+		@include flex-center-center;
 
 		button {
-			&:last-of-type {
-				margin-left: auto !important;
-			}
+			padding: 10px 50px !important;
+
+			// &:last-of-type {
+			// 	margin-left: auto !important;
+			// }
 		}
 	}
 

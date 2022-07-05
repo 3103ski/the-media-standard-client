@@ -20,6 +20,7 @@ export const simpleDropMenu = ({
 	validate = true,
 	customValidation = null,
 	initial = '',
+	multiple = null,
 }) => {
 	let defaultValidation = {
 		min: 1,
@@ -41,7 +42,7 @@ export const simpleDropMenu = ({
 
 	return {
 		placeholder,
-		type: 'dropdown',
+		type: !multiple ? 'dropdown' : 'collection',
 		initial,
 		validate: validate === false ? null : customValidation ? customValidation : defaultValidation,
 		options: optionArray(configuredOptions, placeholder),
@@ -60,6 +61,24 @@ export const textInput = ({
 	};
 	return {
 		type: 'text',
+		initial: '',
+		placeholder,
+		validate: validate === false ? null : customValidation ? customValidation : defaultValidation,
+	};
+};
+
+export const textArea = ({
+	placeholder = 'Input here',
+	validate = true,
+	errorMsg = 'please answer',
+	customValidation = null,
+}) => {
+	let defaultValidation = {
+		min: 1,
+		errorMsg,
+	};
+	return {
+		type: 'textArea',
 		initial: '',
 		placeholder,
 		validate: validate === false ? null : customValidation ? customValidation : defaultValidation,

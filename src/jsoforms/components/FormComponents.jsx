@@ -58,6 +58,7 @@ export function FormTitle({ size = 'med', children }) {
 }
 
 export function DropdownCollection({ multiple = true, ...rest }) {
+	console.log({ ...rest });
 	return (
 		<Form.Field control={SUI_DD} fluid multiple={multiple} search selection {...rest} className={Style.Dropdown} />
 	);

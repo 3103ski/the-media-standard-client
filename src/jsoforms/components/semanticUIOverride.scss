@@ -34,3 +34,12 @@
 	padding: 10px 20px !important;
 	margin-bottom: 10px;
 }
+
+input,
+textarea,
+.ui.multiple.dropdown > .label,
+.ui.selection.dropdown,
+.ui.form .field.field input:-webkit-autofill:focus,
+.ui.form .field.field input:-webkit-autofill {
+	border: solid 2px map-get($colors, color_secondary) !important;
+}

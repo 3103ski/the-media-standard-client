@@ -219,19 +219,14 @@ const FormPanel = ({
 			{renderInputs(panel, values)}
 			<div className={Style.ButtonWrapper}>
 				{prevIndex >= 0 ? (
-					<Button thin onClick={() => paneButtonCallback(prevIndex, panelValues)}>
-						Back
-					</Button>
+					<Button onClick={() => paneButtonCallback(prevIndex, panelValues)}>Back</Button>
 				) : null}
 				{isFinal ? (
-					<Button disabled={disableNextButton} thin onClick={() => onSubmitCallback(panelValues)}>
+					<Button disabled={disableNextButton} onClick={() => onSubmitCallback(panelValues)}>
 						{submitText}
 					</Button>
 				) : (
-					<Button
-						disabled={disableNextButton}
-						thin
-						onClick={() => paneButtonCallback(nextIndex, panelValues)}>
+					<Button disabled={disableNextButton} onClick={() => paneButtonCallback(nextIndex, panelValues)}>
 						Next
 					</Button>
 				)}

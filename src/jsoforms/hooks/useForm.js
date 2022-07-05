@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { updateObj } from '../util/';
-import { TextInput, Dropdown } from '../components';
+import { TextInput, Dropdown, TextArea, DropdownCollection } from '../components';
 import { TextWrapper } from 'components';
 
 export default function useForm(callback, initialState = {}, options) {
@@ -228,6 +228,29 @@ export default function useForm(callback, initialState = {}, options) {
 									/>
 								);
 								return drop;
+							case 'collection':
+								let collection = (
+									<DropdownCollection
+										key={`${i}__${key}`}
+										placeholder={val.placeholder}
+										value={values[key]}
+										name={key}
+										onChange={(e, d) => onDropChange(e, d, key)}
+										options={val.options}
+									/>
+								);
+								return collection;
+							case 'textArea':
+								let area = (
+									<TextArea
+										key={`${i}__${key}`}
+										name={key}
+										placeholder={val.placeholder}
+										value={values[key]}
+										onChange={onChange}
+									/>
+								);
+								return area;
 							case 'text':
 							default:
 								let text = (

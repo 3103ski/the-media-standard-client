@@ -75,51 +75,46 @@ export function fetchProject(slug) {
 	return sanityClient.fetch(
 		`*[slug.current == $slug][0]{
             title,
-            slug, 
-            projectLink,
-            projectType,
-            year,
-            category,
-            status,
-            description,
-            tech[]->{
-                title,
-                icon
-            },
-            mainImage{
-                asset-> {
-                    url, 
-                    _id
+            slug,
+            client->{
+                company,
+                description,
+                logo{
+                    asset-> {
+                        url, 
+                        _id
+                    }
                 }
             },
-            mockups[]{
-                thumbnail{
+
+            images[]->{
+                thumbnail {
                     asset-> {
                         url,
                         _id
                     }
                 },
-                fullImage{
+                fullImage {
                     asset-> {
                         url,
                         _id
                     }
-                },
+                }
             },
-            screenshots[]{
-                thumbnail{
-                    asset-> {
-                        url,
-                        _id
-                    }
-                },
-                fullImage{
-                    asset-> {
-                        url,
-                        _id
-                    }
-                },
-            }
+            tags[]->{
+                title
+            },
+            year,
+            description,
+            projectLink,
+            category,
+            mainImage{
+                asset-> {
+                    url,
+                    _id
+                }
+                
+            },
         }`,
 		{ slug }
 	);

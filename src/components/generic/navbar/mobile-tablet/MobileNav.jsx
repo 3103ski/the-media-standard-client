@@ -60,7 +60,7 @@ export default function MobileNav() {
 			<div className={Style.Container}>
 				<Drawer open={open} toggle={toggleOpen}>
 					<Link.Container>
-						<ToggleLink to={HOME}>Home</ToggleLink>
+						<ToggleLink to={HOME}>HOME</ToggleLink>
 						<ToggleLink to={ABOUT}>ABOUT US</ToggleLink>
 						<ToggleLink to={PORTFOLIO}>SEE OUR WORK</ToggleLink>
 						<ToggleLink to={HOME}>CONTACT</ToggleLink>

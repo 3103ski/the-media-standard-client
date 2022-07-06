@@ -2,7 +2,6 @@
 
 .Wrapper {
 	@include flex-center;
-	// height: 85vh;
 	padding: 200px 0 120px 0;
 	min-height: 600px;
 
@@ -12,5 +11,9 @@
 		img {
 			width: 180px;
 		}
+	}
+
+	@media #{map-get($media, tablet_max)} {
+		padding: 130px 0 50px 0;
 	}
 }

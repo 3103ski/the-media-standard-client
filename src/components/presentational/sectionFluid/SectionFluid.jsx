@@ -21,7 +21,12 @@ export default function SectionFluid({ picture, full, children }) {
 			<Section className={Style.Inner}>
 				<Grid>
 					<Grid.Row>
-						<Grid.Column computer={8} mobile={full ? 16 : 8} tablet={8} className={Style.Content}>
+						<Grid.Column
+							computer={8}
+							mobile={full ? 16 : 8}
+							tablet={8}
+							data-full-pic={full ? 1 : 0}
+							className={Style.Content}>
 							{children}
 						</Grid.Column>
 					</Grid.Row>

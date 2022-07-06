@@ -41,11 +41,13 @@
 
 		.Inner {
 			.Content {
-				padding: 40px !important;
-				p,
-				h1,
-				h3 {
-					color: white;
+				&[data-full-pic='1'] {
+					padding: 40px !important;
+					p,
+					h1,
+					h3 {
+						color: white;
+					}
 				}
 			}
 		}

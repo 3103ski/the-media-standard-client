@@ -38,7 +38,11 @@ export default function useRatio(ratio) {
 
 	React.useEffect(() => {
 		window.addEventListener('resize', calculateHeight);
-		return () => window.removeEventListener('resize', calculateHeight);
+		document.addEventListener('resize', calculateHeight);
+		return () => {
+			document.addEventListener('resize', calculateHeight);
+			window.removeEventListener('resize', calculateHeight);
+		};
 	});
 
 	return {

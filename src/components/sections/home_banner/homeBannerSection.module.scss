@@ -8,7 +8,9 @@
 	background-color: #050505;
 	.Inner {
 		@include flex-center-center;
-
+		position: absolute;
+		width: 100%;
+		height: 100%;
 		overflow: hidden;
 	}
 
@@ -44,11 +46,12 @@
 
 	@media #{map-get($media, tablet_max)} {
 		.Picture {
-			right: -60%;
+			right: -220px;
 		}
 		.Content {
 			width: 70%;
 			padding-left: 20px;
+
 			h3 {
 				@include sub-default;
 				padding: 0 !important;

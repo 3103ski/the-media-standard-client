@@ -37,7 +37,7 @@ export function Footer() {
 							<Link to={PORTFOLIO}>OUR WORK</Link>
 						</Grid.Column>
 						<Grid.Column computer={3} mobile={5} tablet={4} className={Style.LinkCol}>
-							<Link to={CONTACT}>CONTACT US</Link>
+							<Link to={CONTACT}>CONTACT</Link>
 						</Grid.Column>
 						<Grid.Column computer={3} mobile={5} tablet={4} className={Style.LinkCol}>
 							<Link to={ABOUT}>ABOUT</Link>

@@ -11,7 +11,7 @@
 
 .FilterSection {
 	// background-color: map-get($colors, color_themeWhite);
-	background-color: rgba(255, 255, 255, 0.541);
+	// background-color: rgba(255, 255, 255, 0.541);
 	z-index: 100;
 	transition: 0.3s;
 	position: relative;
@@ -59,7 +59,7 @@
 	@include flex-center-center;
 	@include hover-cursor;
 	@include no-select;
-
+	background-color: white;
 	border: 1px solid map-get($colors, color_defaultBlack);
 	border-radius: map-get($borders, borders_small_radius);
 

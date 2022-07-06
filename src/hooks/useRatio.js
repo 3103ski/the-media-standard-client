@@ -1,7 +1,7 @@
 // --> React
 import React from 'react';
-import SASS from '../sass/index.scss';
-import { intFromPx } from 'util';
+// import SASS from '../sass/index.scss';
+// import { intFromPx } from 'util';
 
 export default function useRatio(ratio) {
 	const [width, setWidth] = React.useState(0);
@@ -9,7 +9,7 @@ export default function useRatio(ratio) {
 
 	const calculateHeight = React.useCallback(() => {
 		let multiplier = 0;
-		let screen = window.innerWidth;
+		// let screen = window.innerWidth;
 
 		switch (ratio) {
 			case '16:9':

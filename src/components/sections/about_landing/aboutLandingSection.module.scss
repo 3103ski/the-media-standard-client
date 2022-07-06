@@ -26,7 +26,7 @@
 		margin: 45px auto 0 auto !important;
 	}
 
-	@media #{map-get($media, mobile_sm)} {
+	@media #{map-get($media, tablet_max)} {
 		height: unset;
 		padding: 50px 0;
 		.LogoWrapper {

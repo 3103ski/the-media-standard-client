@@ -19,24 +19,33 @@ export function Footer() {
 			<Section className={Style.Inner}>
 				<Grid style={{ width: '100%' }}>
 					<Grid.Row>
-						<Grid.Column computer={4} className={Style.ImageCol}>
+						<Grid.Column computer={4} tablet={3} mobile={8} className={Style.ImageCol}>
 							<Link to={HOME}>
 								<Image src={logoPatch} />
 							</Link>
 						</Grid.Column>
 
-						<Grid.Column computer={3} className={Style.LinkCol}>
+						<Grid.Column only='mobile' mobile={8} className={Style.StartCol}>
+							<Link to={CONTACT} className={Style.GetStarted}>
+								<Button thin fluid color='secondary'>
+									GET STARTED
+								</Button>
+							</Link>
+						</Grid.Column>
+
+						<Grid.Column computer={3} mobile={5} tablet={4} className={Style.LinkCol}>
 							<Link to={PORTFOLIO}>OUR WORK</Link>
 						</Grid.Column>
-						<Grid.Column computer={3} className={Style.LinkCol}>
+						<Grid.Column computer={3} mobile={5} tablet={4} className={Style.LinkCol}>
 							<Link to={CONTACT}>CONTACT US</Link>
 						</Grid.Column>
-						<Grid.Column computer={3} className={Style.LinkCol}>
+						<Grid.Column computer={3} mobile={5} tablet={4} className={Style.LinkCol}>
 							<Link to={ABOUT}>ABOUT</Link>
 						</Grid.Column>
-						<Grid.Column computer={3} className={Style.StartCol}>
+
+						<Grid.Column computer={3} only='tablet computer' tablet={16} className={Style.StartCol}>
 							<Link to={CONTACT} className={Style.GetStarted}>
-								<Button thin color='secondary'>
+								<Button thin fluid color='secondary'>
 									GET STARTED
 								</Button>
 							</Link>

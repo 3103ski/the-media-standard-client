@@ -20,7 +20,7 @@ export default function AboutLandingSection() {
 				<Section>
 					<Grid>
 						<Grid.Row>
-							<Grid.Column mobile={16} tablet={8} computer={4} className={Style.LogoWrapper}>
+							<Grid.Column mobile={16} tablet={16} computer={4} className={Style.LogoWrapper}>
 								<Image src={logoPatch} className={Style.Logo} fluid alt='Media Standard Logo' />
 							</Grid.Column>
 							<Grid.Column mobile={16} computer={11}>

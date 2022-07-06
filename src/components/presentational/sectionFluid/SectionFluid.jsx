@@ -10,14 +10,18 @@ import { Section } from 'components';
 // --> Component Imports
 import Style from './sectionFluid.module.scss';
 
-export default function SectionFluid({ picture, children }) {
+export default function SectionFluid({ picture, full, children }) {
 	return (
 		<Section fluid className={Style.Outer}>
-			<div className={Style.ImageHalf} style={{ backgroundImage: `url(${picture})` }} />
+			<div
+				className={Style.ImageHalf}
+				data-full-pic={full ? 1 : 0}
+				style={{ backgroundImage: `url(${picture})` }}
+			/>
 			<Section className={Style.Inner}>
 				<Grid>
 					<Grid.Row>
-						<Grid.Column computer={8} className={Style.Content}>
+						<Grid.Column computer={8} mobile={full ? 16 : 8} tablet={8} className={Style.Content}>
 							{children}
 						</Grid.Column>
 					</Grid.Row>

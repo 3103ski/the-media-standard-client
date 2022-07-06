@@ -17,9 +17,8 @@
 			@include flex-col-center;
 			min-height: 500px;
 			align-items: flex-start;
-			padding-bottom: 40px;
+			padding-bottom: 120px;
 			padding-top: 30px;
-			margin-bottom: 80px !important;
 
 			p,
 			h1,
@@ -33,6 +32,22 @@
 		.ImageHalf {
 			filter: opacity(0.5);
 			width: 25%;
+
+			&[data-full-pic='1'] {
+				width: 100%;
+				filter: brightness(50%);
+			}
+		}
+
+		.Inner {
+			.Content {
+				padding: 40px !important;
+				p,
+				h1,
+				h3 {
+					color: white;
+				}
+			}
 		}
 	}
 }

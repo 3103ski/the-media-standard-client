@@ -12,7 +12,7 @@ import Style from './homeMediaBioSection.module.scss';
 
 export default function HomeMediaBioSection() {
 	return (
-		<SectionFluid picture={resMediaPlaceholder}>
+		<SectionFluid full picture={resMediaPlaceholder}>
 			<TextWrapper>
 				<p className={Style.Text}>
 					t perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam

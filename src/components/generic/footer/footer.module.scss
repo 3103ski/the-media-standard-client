@@ -12,6 +12,7 @@
 		font-weight: 300;
 		color: white;
 		margin: 0;
+		text-align: center;
 
 		a {
 			color: map-get($colors, color_secondary);
@@ -52,10 +53,34 @@
 		}
 	}
 
-	// @media #{map-get($media, tablet_max)} {
-	// 	padding-bottom: 0 !important;
+	@media #{map-get($media, tablet_max)} {
+		width: 100% !important;
 
-	// 	.Inner {
-	// 	}
-	// }
+		p {
+			padding: 0 30px !important;
+		}
+
+		.Inner {
+			text-align: center !important;
+
+			.LinkCol {
+				@include flex-col-center-center;
+				margin: 10px 0 !important;
+				a {
+					padding: 4px;
+				}
+			}
+
+			.StartCol {
+				@include flex-center-center;
+
+				.GetStarted {
+					@include flex-center-center;
+					position: relative;
+					margin: 10px 0;
+					right: 0;
+				}
+			}
+		}
+	}
 }

@@ -70,6 +70,22 @@ export function fetchProjects() {
 	);
 }
 
+export function fetchClients() {
+	return sanityClient.fetch(
+		`*[_type == 'clientSection'][0]{
+            clients[]->{
+                company,
+                logo{
+                    asset-> {
+                        url,
+                        _id
+                    }
+                },
+            }
+        }`
+	);
+}
+
 export function fetchTeam() {
 	return sanityClient.fetch(
 		`*[_type == 'teamSection'][0]{

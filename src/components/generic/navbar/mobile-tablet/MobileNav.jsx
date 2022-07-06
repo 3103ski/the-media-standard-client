@@ -5,7 +5,7 @@ import React from 'react';
 // import { Icon } from '@iconify/react';
 
 // --> Project Imports
-import { HOME, PORTFOLIO, ABOUT } from 'routes';
+import { HOME, PORTFOLIO, ABOUT, CONTACT } from 'routes';
 // import { Button, Modal } from 'components';
 // import { EMAIL } from 'icons';
 
@@ -63,7 +63,7 @@ export default function MobileNav() {
 						<ToggleLink to={HOME}>HOME</ToggleLink>
 						<ToggleLink to={ABOUT}>ABOUT US</ToggleLink>
 						<ToggleLink to={PORTFOLIO}>SEE OUR WORK</ToggleLink>
-						<ToggleLink to={HOME}>CONTACT</ToggleLink>
+						<ToggleLink to={CONTACT}>CONTACT</ToggleLink>
 					</Link.Container>
 				</Drawer>
 			</div>

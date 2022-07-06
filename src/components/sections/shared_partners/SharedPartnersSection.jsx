@@ -5,34 +5,28 @@ import React from 'react';
 import { Image, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
-import { Section } from 'components';
-import { logo_bently, logo_champion, logo_feam, logo_ge, logo_flexport, logo_omaze, logo_marlins } from 'assets';
+import { Section, Loading } from 'components';
+import { fetchClients } from 'groq';
+import { checkSeshStorageAddIfNeeded } from 'util';
 
 // --> Component Imports
 import Style from './sharedPartnersSection.module.scss';
 
 export default function SharedPartnersSection() {
-	let logos = [
-		logo_bently,
-		logo_feam,
-		logo_ge,
-		logo_flexport,
-		logo_champion,
-		logo_omaze,
-		logo_marlins,
-		logo_ge,
-		logo_flexport,
-		logo_champion,
-		logo_omaze,
-		logo_marlins,
-	];
+	const [clients, setClients] = React.useState(null);
 
-	return (
+	// Fetch team member data
+	React.useEffect(() => {
+		checkSeshStorageAddIfNeeded(`tms_clients`, setClients, fetchClients, null, 'clients');
+	}, []);
+	return !clients ? (
+		<Loading size='small' />
+	) : (
 		<div className={Style.Wrapper}>
 			<Section>
 				<Grid textAlign='center'>
 					<Grid.Row>
-						{[...logos].map((logo, i) =>
+						{clients.map((client, i) =>
 							i > 11 ? null : (
 								<Grid.Column
 									key={`${Math.random()}_${i}`}
@@ -40,7 +34,7 @@ export default function SharedPartnersSection() {
 									tablet={8}
 									mobile={5}
 									className={Style.ImageColumn}>
-									<Image src={logo} />
+									<Image src={client.logo.asset.url} />
 								</Grid.Column>
 							)
 						)}

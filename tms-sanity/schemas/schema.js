@@ -13,6 +13,7 @@ import workPage from './workPage';
 import client from './client';
 import teamMember from './teamMember';
 import teamSection from './teamSection';
+import clientSection from './clientSection';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -26,6 +27,7 @@ export default createSchema({
 		tag,
 		workPage,
 		teamSection,
+		clientSection,
 		general,
 	]),
 });

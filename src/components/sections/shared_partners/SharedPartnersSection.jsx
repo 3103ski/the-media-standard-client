@@ -30,7 +30,7 @@ export default function SharedPartnersSection() {
 	return (
 		<div className={Style.Wrapper}>
 			<Section>
-				<Grid>
+				<Grid textAlign='center'>
 					<Grid.Row>
 						{[...logos].map((logo, i) =>
 							i > 11 ? null : (

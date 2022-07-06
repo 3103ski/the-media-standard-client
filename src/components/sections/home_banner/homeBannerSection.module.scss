@@ -1,15 +1,18 @@
 @import 'sass';
 
 .Outer {
-	@include flex-center;
+	@include flex-center-center;
+
 	min-height: 600px;
 	position: relative;
-	overflow: hidden;
 	background-color: #050505;
+	.Inner {
+		@include flex-center-center;
+
+		overflow: hidden;
+	}
 
 	.Picture {
-		// width: 30%;
-		// max-width: 500px;
 		height: 100%;
 		position: absolute;
 		right: 0;
@@ -41,7 +44,7 @@
 
 	@media #{map-get($media, tablet_max)} {
 		.Picture {
-			right: -30%;
+			right: -60%;
 		}
 		.Content {
 			width: 70%;

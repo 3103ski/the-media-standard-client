@@ -73,9 +73,9 @@ export default function DesktopNav({ services }) {
 				<div className={Style.RightLinks}>
 					<RootLink to={ABOUT}>About Us</RootLink>
 					<RootLink to={PORTFOLIO}>Our Work</RootLink>
-					<Link to={CONTACT}>
+					<RootLink to={CONTACT}>
 						<Button thin>Let's Talk</Button>
-					</Link>
+					</RootLink>
 				</div>
 			</motion.nav>
 		</div>

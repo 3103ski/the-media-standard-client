@@ -12,7 +12,6 @@
 		.BackgroundWrapper {
 			position: absolute;
 			top: 0;
-			// transform: scale(1.03);
 			width: 100%;
 			height: 100%;
 			transition: 0.2s;
@@ -24,8 +23,6 @@
 				transform: translateX(-50%);
 				width: 100%;
 				height: 100%;
-				// transition: 0.15s;
-				// transition-timing-function: ease-out;
 				z-index: inherit;
 			}
 		}

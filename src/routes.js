@@ -6,5 +6,4 @@ export const PORTFOLIO = '/portfolio';
 export const CONTACT = '/contact';
 
 export const SERVER = `${SERVER_URL}`;
-export const SERVER_CONTACT_FORMS = `${SERVER}/contact`;
-export const SERVER_SURVEY_FORMS = `${SERVER}/survey`;
+export const SERVER_CONTACT_FORMS = `${SERVER}/contact/tms`;

@@ -1,15 +1,18 @@
 @import 'sass';
 
 .Wrapper {
+	padding-bottom: 45px;
+	width: 100%;
+
 	h2 {
 		@include sub-default;
 	}
-	padding-bottom: 45px;
 
 	p {
 		@include p-summary;
 		margin-bottom: 20px;
 		letter-spacing: 1px;
+		white-space: wrap !important;
 
 		strong {
 			font-weight: 500;

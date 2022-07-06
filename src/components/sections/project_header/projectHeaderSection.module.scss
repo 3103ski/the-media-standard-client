@@ -23,7 +23,8 @@
 
 		a {
 			@include p-small;
-			margin-top: 5px;
+			margin: 5px;
+			text-align: center;
 			color: map-get($colors, color_primary);
 		}
 	}

@@ -16,7 +16,14 @@ export default function ProjectHeaderSection({ project }) {
 			<Section>
 				<Grid>
 					<Grid.Row>
-						<Grid.Column only='mobile' mobile={10} />
+						<Grid.Column only='mobile' mobile={9} />
+
+						{/*  MOBILE - TABLET LOGO */}
+						<Grid.Column mobile={3} tablet={2} only='mobile tablet'>
+							<Image src={project.client.logo.asset.url} alt='client logo' />
+						</Grid.Column>
+
+						{/* MOBILE YEAR TEXT */}
 						<Grid.Column mobile={4} only='mobile' className={Style.Right}>
 							<h1>{project.year}</h1>
 							{!project.projectLink ? (
@@ -25,17 +32,20 @@ export default function ProjectHeaderSection({ project }) {
 								</a>
 							) : null}
 						</Grid.Column>
+
+						{/* COMPUTER LOGO */}
 						<Grid.Column computer={2} only='computer'>
 							<Image src={project.client.logo.asset.url} alt='client logo' />
 						</Grid.Column>
-						<Grid.Column computer={12} mobile={16} tablet={12} className={Style.Center}>
+
+						{/* TITLE CONTENT */}
+						<Grid.Column computer={12} mobile={16} tablet={11} className={Style.Center}>
 							<h1>{project.title}</h1>
 							{project.tags.length > 0 ? <h3>{project.tags.map((t) => t.title).join(', ')}</h3> : null}
 						</Grid.Column>
-						<Grid.Column tablet={2} mobile={3} only='tablet'>
-							<Image src={project.client.logo.asset.url} alt='client logo' />
-						</Grid.Column>
-						<Grid.Column computer={2} tablet={2} only='computer tablet' className={Style.Right}>
+
+						{/* TABLET - COMPUTER YEAR */}
+						<Grid.Column computer={2} tablet={3} only='computer tablet' className={Style.Right}>
 							<h1>{project.year}</h1>
 							{!project.projectLink ? (
 								<a target='_blank' href={'http://google.com'} rel='noreferrer'>

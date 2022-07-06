@@ -16,7 +16,7 @@ export default function ProjectHeaderSection({ project }) {
 			<Section>
 				<Grid>
 					<Grid.Row>
-						<Grid.Column only='mobile' mobile={9} />
+						<Grid.Column only='mobile' mobile={8} />
 
 						{/*  MOBILE - TABLET LOGO */}
 						<Grid.Column mobile={3} tablet={2} only='mobile tablet'>
@@ -24,7 +24,7 @@ export default function ProjectHeaderSection({ project }) {
 						</Grid.Column>
 
 						{/* MOBILE YEAR TEXT */}
-						<Grid.Column mobile={4} only='mobile' className={Style.Right}>
+						<Grid.Column mobile={5} only='mobile' className={Style.Right}>
 							<h1>{project.year}</h1>
 							{!project.projectLink ? (
 								<a target='_blank' href={'http://google.com'} rel='noreferrer'>

@@ -24,8 +24,6 @@ export default function BrowseProjectsSection() {
 				checkSeshStorageAddIfNeeded(`tms__projects_browse`, callback, fetchProjects, null, 'projects'),
 		});
 
-	console.log({ renderItems });
-
 	return !renderItems ? (
 		<Loading size='screen' />
 	) : (

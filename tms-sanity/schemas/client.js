@@ -7,10 +7,11 @@ export default {
 			name: 'company',
 			title: 'Client Name',
 			type: 'string',
+			validation: (Rule) => Rule.required(),
 		},
 		{
 			name: 'description',
-			title: 'Description',
+			title: 'Description (optional)',
 			type: 'string',
 		},
 		{
@@ -20,6 +21,7 @@ export default {
 			options: {
 				hotspot: true,
 			},
+			validation: (Rule) => Rule.required(),
 		},
 	],
 };

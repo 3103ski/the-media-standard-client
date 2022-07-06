@@ -138,7 +138,6 @@ export default function FormGenerator({ formObject, callback }) {
 		window.addEventListener('resize', calcWidth);
 		return () => window.removeEventListener('resize', calcWidth);
 	}, [calcWidth]);
-	console.log(formWidth);
 
 	return (
 		<Form onSubmit={onSubmit} className={Style.MultiPageForm}>

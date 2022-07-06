@@ -10,15 +10,13 @@ import { Overlay } from 'components';
 // --> Component Imports
 import Style from './card.module.scss';
 
-export default function TeamMemberCard({ item = { img: ' ', title: '', subtitle: '', content: '' } }) {
+export default function TeamMemberCard({ item }) {
 	const Title = () => {
-		let rest = item.title.split(' ').splice(1).join(' ');
-		let first = item.title.split(' ')[0];
 		return (
 			<div className={Style.TitleWrapper}>
-				<h1>{first}</h1>
-				<h1>{rest}</h1>
-				{item.subtitle && item.subtitle !== '' ? <p>{item.subtitle}</p> : null}
+				<h1>{item.firstName}</h1>
+				<h1>{item.lastName}</h1>
+				{item.title && item.title !== '' ? <p>{item.title}</p> : null}
 			</div>
 		);
 	};
@@ -47,7 +45,7 @@ export default function TeamMemberCard({ item = { img: ' ', title: '', subtitle:
 		<Grid.Column mobile={16} tablet={8} computer={4} className={Style.Container}>
 			<div className={Style.Inner} ref={ref}>
 				<div className={Style.BackgroundWrapper}>
-					<img className={Style.BackgroundImage} src={item.img} alt='team member' />
+					<img className={Style.BackgroundImage} src={item.picture.asset.url} alt='team member' />
 				</div>
 				<Overlay pale type='brand-reverse' />
 				<Overlay.Sibling>
@@ -58,7 +56,7 @@ export default function TeamMemberCard({ item = { img: ' ', title: '', subtitle:
 						<div className={Style.ContentInner}>
 							<div className={Style.Content}>
 								<Title />
-								<p className={Style.TextContent}>{item.content}</p>
+								<p className={Style.TextContent}>{item.bio}</p>
 							</div>
 						</div>
 					</div>

@@ -11,9 +11,21 @@ import project from './project';
 import tag from './tag';
 import workPage from './workPage';
 import client from './client';
+import teamMember from './teamMember';
+import teamSection from './teamSection';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
 	name: 'websitedata',
-	types: schemaTypes.concat([blockContent, client, project, imageAsset, tag, workPage, general]),
+	types: schemaTypes.concat([
+		blockContent,
+		client,
+		project,
+		teamMember,
+		imageAsset,
+		tag,
+		workPage,
+		teamSection,
+		general,
+	]),
 });

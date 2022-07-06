@@ -70,6 +70,26 @@ export function fetchProjects() {
 	);
 }
 
+export function fetchTeam() {
+	return sanityClient.fetch(
+		`*[_type == 'teamSection'][0]{
+            title, 
+            teamMembers[]->{
+                firstName, 
+                lastName,
+                title,
+                bio,
+                picture{
+                    asset-> {
+                        url,
+                        _id
+                    }
+                },
+            }
+        }`
+	);
+}
+
 // Get Specific Service Content
 export function fetchProject(slug) {
 	return sanityClient.fetch(
